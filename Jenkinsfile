@@ -5,9 +5,9 @@ pipeline{
             args '-p 3000:3000'
             args '-u root:root'
         }
-    environment{
-        CI = true
     }
+   environment{
+        CI = true
     }
     stages{
         stage('Build')
