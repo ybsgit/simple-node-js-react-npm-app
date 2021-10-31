@@ -1,7 +1,7 @@
 pipeline{
     agent{
         docker{
-            image 'node:lts-buster-slim'
+            image 'node'
             args '-p 3000:3000'
         }
     }
@@ -9,7 +9,7 @@ pipeline{
         stage('Build')
         {
             steps{
-                sh 'sudo chown -R 112:116 "/.npm"'
+              
                 sh 'npm install'
             }
         }
